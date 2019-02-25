@@ -3,49 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fontello/fontello.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section id="homePage">
+    <section id="home-page" class="show">
       <div class="start">
-        <h1>MODO INCOGNITO</h1>
-        <img src="" alt="">
-        <button id="encode" type="button">encriptar</button>
-        <button id="decode" type="button">desencriptar</button>
+        <header class="header">
+        <!-- <h1 class="icon-encriptar"></h1> -->
+        <div class="logo"> 
+          <img src="../src/img/8d685f34-052e-44a5-9ddd-3cc79c57c16c.png" alt="">
+        </div>
+      </header>
+        <h2>servicio de encriptado y desencriptado de mensajes sumamente privado</h2>
+        <button class="cifrar" id="encode" type="button">encriptar</button>
+        <button class="descifrar" id="decode" type="button">desencriptar</button>
       </div>
   </section>
-  <section id="pageCipher">
-    <div class="enterOffset">
+  <section id="page-cipher" class="hide">
+    <div class="enter-offset">
       <!-- p -->
       <h3>Ingresa tu codigo secreto</h3> 
-      <input type="number" placeholder="ingresar offset">
+      <input id="offset" type="number" placeholder="ingresar offset">
       <p>No olvides compartir tu codigo secreto con tu receptor</p>
     </div>
-    <div class="pageEncode">
-      <h4>Mensaje a encriptar:</h4>
-      <textarea class="message" name="message" id="messageEntered" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
-      <button type="button">encriptar</button>
-      <h4>Mensaje encriptado:</h4>
-      <textarea class="message_encoded" name="message_encoded" id="messageEncoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea>
-      <button type="button">inicio</button>
-      <button type="button">desencriptar</button>
+    <div class="page-encode">
+      <h4>Ingresa tus datos</h4>
+      <p>Nombre:</p>
+      <input class="enter-name" id="name-encode" placeholder="nombre">
+      <p>Apellido:</p>
+      <input type="text" placeholder="apellido" id="surname-encode">
+      <p>N° de tarjeta</p>
+      <input type="text" placeholder="xxxx xxxx xxxx xxxx" id="card-encode">
+      <p>fecha:</p>
+      <input type="number" placeholder="xx/xx" id="date-encode">
+      <p>cvv</p>
+      <input type="number" placeholder="xxx" id="cvv-encode">
+      <button id="btn-encode" type="button">encriptar</button>
+      <h4>Datos encriptado:</h4>
+      <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea>
+      <button id="btn-start" type="button">inicio</button>
+      <button id="btn-decoded" type="button">desencriptar</button>
     </div>
   </section>
-  <section id="pageDescipher">
-      <div class="enterOffset">
+  <section id="page-descipher" class="hide">
+    <div class="enter-offset">
         <!-- p -->
-        <h3>Ingresa tu codigo secreto</h3> 
-        <input type="number" placeholder="ingresar offset">
-        <p>No olvides compartir tu codigo secreto con tu receptor</p>
-      </div>
-    <div id="pageDecode">
-      <h4>Mensaje a desencriptar:</h4>
-      <textarea class="message" name="message" id="messageEncrypted" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
-      <button type="button">desencriptar</button>
-      <h4>Mensaje desencriptado:</h4>
-      <textarea class="message_decoded" name="message_decoded" id="messageDecrypted" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea>
-      <button type="button">inicio</button>
-      <button type="button">desencriptar</button>
+      <h3>Ingresa tu codigo secreto</h3> 
+      <input id="offsetD" type="number" placeholder="ingresar offset">
+    </div>
+    <div id="page-decode">
+      <h4>Datos a desencriptar:</h4>
+      <textarea class="message" id="message-decode" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
+      <button id='btn-decode' type="button">desencriptar</button>
+      <h4>Datos desencriptado:</h4>
+      <p>Nombre:</p>
+      <input class="message" id="name-decoded" placeholder="nombre"></textarea>
+      <p>Apellidos:</p>
+      <input type="text" placeholder="apellidos" id="surnmae-decoded">
+      <p>N° de tarjeta:</p>
+      <input type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-decoded">
+      <p>Fecha:</p>
+      <input type="number" placeholder="xx/xx" id="date-decoded">
+      <p>cvv</p>
+      <input type="number" placeholder="xxx" id="cvv-decoded">
+      <button id="btn-home" type="button">inicio</button>
+      <button id="btn-encoded" type="button">encriptar</button>
     </div>
   </section>
     <script src="cipher.js"></script>
