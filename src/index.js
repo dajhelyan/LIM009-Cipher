@@ -1,20 +1,8 @@
-// const home = document.getElementById('home-page')
-// const cipher =document.getElementById('page-cipher')
-// const descipher = document.getElementById('page-descipher')
-// const buttonCipher = document.getElementById('encode')
-// const buttonDescipher = document.getElementById('decode')
-// const buttonStart = document.getElementById('btn-start')
-//const buttonEncode = document.getElementById('btn-encode')
-// const buttonDecoded = document.getElementById('btn-decoded')
-// const buttonDecode = document.getElementById('btn-decode')
-// const buttonHome = document.getElementById('btn-home')
-// const buttonEncoded = document.getElementById('btn-encoded')
-
-
 const buttonEncode = document.getElementById('btn-encode');
 buttonEncode.addEventListener('click', () => {
     const offset = parseInt(document.getElementById('offset').value);
     let enterName = document.getElementById('name-encode').value;
+    
     if (!enterName) {
         enterName = '';
     }
@@ -34,11 +22,32 @@ buttonEncode.addEventListener('click', () => {
         if (!cvvEncode) {
             cvvEncode = '';
         }
-    let data = enterName + surnameEncode + cardEncode + dateEncode + cvvEncode;
-    document.getElementById('message-encoded').innerHTML = window.cipher.encode(offset, data);
+    // let data = enterName + surnameEncode + cardEncode + dateEncode + cvvEncode;
+
+    const personObj = {};
+    personObj.name = enterName;
+    personObj.surname = surnameEncode;
+    personObj.card = cardEncode;
+    personObj.date = dateEncode;
+    personObj.cvv = cvvEncode;
+    const myJSON = JSON.stringify(personObj);
+
+    document.getElementById('message-encoded').innerHTML = window.cipher.encode(offset, myJSON);
 })
 
+const buttonDecode = document.getElementById('btn-decode');
+buttonDecode.addEventListener('click', () => {
+    const offset = parseInt(document.getElementById('offset').value);
+    const messageEncoded = document.getElementById('message-decode').value;
+    const messageDecoded = window.cipher.decode(offset, messageEncoded);
+    const newObj = JSON.parse(messageDecoded);
 
+    document.getElementById('name-decoded').value = newObj.name;
+    document.getElementById('surname-decoded').value = newObj.surname;
+    document.getElementById('card-decoded').value = newObj.card;
+    document.getElementById('date-decoded').value = newObj.date;
+    document.getElementById('cvv-decoded').value = newObj.cvv;
+})
 
 // const buttonDecode = document.getElementById('btn-decode');
 // buttonDecode.addEventListener('click', () => {
