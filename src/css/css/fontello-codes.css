@@ -1,6 +1,8 @@
 
 .icon-cifrar:before { content: '\e800'; } /* '' */
 .icon-descifrar:before { content: '\e801'; } /* '' */
+.icon-lock-open-filled:before { content: '\e803'; } /* '' */
 .icon-desencriptar:before { content: '\f075'; } /* '' */
 .icon-copiar:before { content: '\f0c5'; } /* '' */
+.icon-credit-card-alt:before { content: '\f283'; } /* '' */
 .icon-encriptar:before { content: '\f510'; } /* '' */

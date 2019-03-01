@@ -1,8 +1,7 @@
 window.cipher = {
   encode : (offset, message) => {
     let messageCipher = '';
-    // console.log(message);
-      for(let i=0; i < message.length; i++){
+        for(let i=0; i < message.length; i++){
         const code = message.charCodeAt(i);
         let encoded;
         if (code >= 65 && code <= 91) {
@@ -62,4 +61,4 @@ window.cipher = {
       }
       return messageDescipher;
    },
-} ;
+} 
