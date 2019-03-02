@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="css/fontello/fontello.css" />
+    <!-- <link rel="stylesheet" href="css/fontello.css" /> -->
+    
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -12,17 +13,18 @@
         <header class="header">
          <h1 class="icon-encriptar"></h1>
         <div class="logo"> 
-          <img src="../src/img/8d685f34-052e-44a5-9ddd-3cc79c57c16c.png" alt="">
+          <img src="../src/img/a8e24f28-6b6e-4d88-adb4-d005d2ea79f5.png" alt="">
         </div> 
       </header> 
         <h2>servicio de encriptado y desencriptado de mensajes sumamente privado</h2>
-        <button class="cifrar" id="encode" type="button">encriptar</button>
-        <button class="descifrar" id="decode" type="button">desencriptar</button>
+        <i class="icono far fa-credit-card"></i>
+        <i class="icono fas fa-credit-card"></i>
+        <!-- <button class="cifrar" id="encode" type="button">encriptar</button>
+        <button class="descifrar" id="decode" type="button">desencriptar</button> -->
       </div>
   </section>
   <section id="page-cipher" class="hide">
     <div class="enter-offset">
-      <!-- p -->
       <h3>Ingresa tu codigo secreto</h3> 
       <input id="offset" type="number" placeholder="ingresar offset">
       <p>No olvides compartir tu codigo secreto con tu receptor</p>
@@ -34,16 +36,20 @@
       <p>Apellido:</p>
       <input type="text" placeholder="apellido" id="surname-encode">
       <p>N° de tarjeta</p>
-      <input type="text" placeholder="xxxx xxxx xxxx xxxx" id="card-encode">
+      <input type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-encode">
       <p>fecha:</p>
       <input type="number" placeholder="xx/xx" id="date-encode">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-encode">
-      <button id="btn-encode" type="button">encriptar</button>
+      <i class="fas fa-lock"></i>
+      <!-- <button id="btn-encode" type="button">encriptar</button> -->
       <h4>Datos encriptado:</h4>
-      <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> -->
-      <button id="btn-start" type="button">inicio</button>
-      <button id="btn-decoded" type="button">desencriptar</button>
+      <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> 
+      <i class="fas fa-copy"></i>
+      <i class="fas fa-home"></i>
+      <!-- <button id="btn-start" type="button">inicio</button> -->
+      <i class="fas fa-lock-open"></i>
+      <!-- <button id="btn-decoded" type="button">desencriptar</button> -->
     </div>
   </section>
   <section id="page-descipher" class="hide">
@@ -54,7 +60,9 @@
     <div id="page-decode">
       <h4>Datos a desencriptar:</h4>
       <textarea class="message" id="message-decode" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
-      <button id="btn-decode" type="button">desencriptar</button>
+      <i class="fas fa-paste"></i>
+      <i class="fas fa-lock-open"></i>
+      <!-- <button id="btn-decode" type="button">desencriptar</button> -->
       <h4>Datos desencriptado:</h4>
       <p>Nombre:</p>
       <input class="message" id="name-decoded" placeholder="nombre">
@@ -66,10 +74,13 @@
       <input type="number" placeholder="xx/xx" id="date-decoded">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-decoded">
-      <button id="btn-home" type="button">inicio</button>
-      <button id="btn-encoded" type="button">encriptar</button>
+      <i class="fas fa-home"></i>
+      <!-- <button id="btn-home" type="button">inicio</button> -->
+      <!-- <button id="btn-encoded" type="button">encriptar</button> -->
+      <i class="fas fa-lock"></i>
     </div>
   </section>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

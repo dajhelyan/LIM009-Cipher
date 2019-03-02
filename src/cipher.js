@@ -13,7 +13,7 @@ window.cipher = {
         } else if (code  >=  32 && code <= 47){
           encoded = (code - 32 + offset) % 16 + 32;
         } else if (code >= 209 && code <= 241){
-          encoded = (code - 209 && + offset) % 32 + 209;
+          encoded = (code - 209 + offset) % 32 + 209;
         } else {
           encoded = code;
         }
@@ -22,6 +22,7 @@ window.cipher = {
       }
       return messageCipher;
   },
+
 
   decode : (offset, message) => {
     let messageDescipher = '';
@@ -60,5 +61,5 @@ window.cipher = {
         messageDescipher = messageDescipher + messageDecoded;
       }
       return messageDescipher;
-   },
-} 
+   }
+}

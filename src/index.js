@@ -22,8 +22,7 @@ buttonEncode.addEventListener('click', () => {
         if (!cvvEncode) {
             cvvEncode = '';
         }
-    // let data = enterName + surnameEncode + cardEncode + dateEncode + cvvEncode;
-
+        
     const personObj = {};
     personObj.name = enterName;
     personObj.surname = surnameEncode;
