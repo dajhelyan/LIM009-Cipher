@@ -4,23 +4,35 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <!-- <link rel="stylesheet" href="css/fontello.css" /> -->
-    
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <section id="home-page" class="show">
       <div class="start">
-        <header class="header">
-         <h1 class="icon-encriptar"></h1>
+        <header id="header">
+         <!-- <h1 class="icon-encriptar"></h1> -->
         <div class="logo"> 
-          <img src="../src/img/a8e24f28-6b6e-4d88-adb4-d005d2ea79f5.png" alt="">
+          <img src="../src/img/69ff5d9d-3bb0-44ee-b802-7ae26aee3bb3.png" alt="">
         </div> 
-      </header> 
-        <h2>servicio de encriptado y desencriptado de mensajes sumamente privado</h2>
-        <i class="icono far fa-credit-card"></i>
-        <i class="icono fas fa-credit-card"></i>
-        <!-- <button class="cifrar" id="encode" type="button">encriptar</button>
-        <button class="descifrar" id="decode" type="button">desencriptar</button> -->
+      </header>
+      <section id="banner">
+        <img src="../src/img/367832561.jpg" alt="">
+      <div class="contenedor">
+        <h2>Servicio de encriptado de datos</h2>
+        <p>Encripta tus datos online con el metodo cesar cipher, con el cual podras encriptar tus datos de manera segura con un codigo secreto</p>
+      </div>
+      </section>
+      <div id="buttons">
+        <div class="contenedor">
+        <button class="button cipher"><i class="buttonstart far fa-credit-card"></i></button>
+        <h2>Encriptar</h2>
+      </div>
+      <div class="contenedor">
+        <button class="button descipher"><i class="buttonstart fas fa-credit-card"></i></button>
+        <h2>Desencriptar</h2>
+      </div>  
+      </div>
       </div>
   </section>
   <section id="page-cipher" class="hide">
@@ -46,9 +58,8 @@
       <h4>Datos encriptado:</h4>
       <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> 
       <i class="fas fa-copy"></i>
-      <i class="fas fa-home"></i>
-      <!-- <button id="btn-start" type="button">inicio</button> -->
-      <i class="fas fa-lock-open"></i>
+      <button class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
+       <button class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decoded" type="button">desencriptar</button> -->
     </div>
   </section>
@@ -61,7 +72,7 @@
       <h4>Datos a desencriptar:</h4>
       <textarea class="message" id="message-decode" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
       <i class="fas fa-paste"></i>
-      <i class="fas fa-lock-open"></i>
+      <button class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decode" type="button">desencriptar</button> -->
       <h4>Datos desencriptado:</h4>
       <p>Nombre:</p>
@@ -74,7 +85,7 @@
       <input type="number" placeholder="xx/xx" id="date-decoded">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-decoded">
-      <i class="fas fa-home"></i>
+      <button class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
       <!-- <button id="btn-home" type="button">inicio</button> -->
       <!-- <button id="btn-encoded" type="button">encriptar</button> -->
       <i class="fas fa-lock"></i>
