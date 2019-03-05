@@ -74,13 +74,13 @@ section {
 .contenedor{
     text-align: center;
 }
-/*.show{
+.show{
     display: block;
-}*/
+}
 
-/*.hide{
+.hide{
     display: none;
-} */
+}
 
 /* .icono{
     font-size: 200px;
@@ -89,7 +89,7 @@ section {
     background: #00B0FF;
     color: #fff;
     display: inline-block;
-    font-size: 2.25em;
+    font-size: 1.25em;
     margin: 20px;
     padding: 10px 0px;
     text-align: center;
@@ -106,7 +106,7 @@ section {
     background: #1DE9B6;
     color: #fff;
     display: inline-block;
-    font-size: 2.25em;
+    font-size: 1.25em;
     margin: 20px;
     padding: 10px 0px;
     text-align: center;

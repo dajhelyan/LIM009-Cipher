@@ -25,11 +25,11 @@
       </section>
       <div id="buttons">
         <div class="contenedor">
-        <button class="button cipher"><i class="buttonstart far fa-credit-card"></i></button>
+        <button id="button-cipher" type="button" class="button cipher"><i class="buttonstart far fa-credit-card"></i></button>
         <h2>Encriptar</h2>
       </div>
       <div class="contenedor">
-        <button class="button descipher"><i class="buttonstart fas fa-credit-card"></i></button>
+        <button id="button-descipher" type="button" class="button descipher"><i class="buttonstart fas fa-credit-card"></i></button>
         <h2>Desencriptar</h2>
       </div>  
       </div>
@@ -53,12 +53,12 @@
       <input type="number" placeholder="xx/xx" id="date-encode">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-encode">
-      <i class="fas fa-lock"></i>
+      <button id="btn-encode"><span><i class="fas fa-lock"></i></span>Encriptar</i></button> 
       <!-- <button id="btn-encode" type="button">encriptar</button> -->
       <h4>Datos encriptado:</h4>
       <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> 
       <i class="fas fa-copy"></i>
-      <button class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
+      <button id="" class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
        <button class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decoded" type="button">desencriptar</button> -->
     </div>
@@ -72,7 +72,7 @@
       <h4>Datos a desencriptar:</h4>
       <textarea class="message" id="message-decode" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
       <i class="fas fa-paste"></i>
-      <button class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
+      <button id="btn-decode" class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decode" type="button">desencriptar</button> -->
       <h4>Datos desencriptado:</h4>
       <p>Nombre:</p>

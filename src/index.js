@@ -1,3 +1,24 @@
+const homePage = document.getElementById('home-page');
+const pageCipher = document.getElementById('page-cipher');
+const pageDescipher = document.getElementById('page-descipher');
+const buttonCipher = document.getElementById('button-cipher');
+const buttonDescipher = document.getElementById('button-descipher');
+// const clickButtonStart = document.getElementById('')
+
+const clickButtonCipher = () => {
+    pageCipher.classList.add('show');
+    pageCipher.classList.remove('hide');
+    homePage.classList.remove('hide');
+    homePage.classList.add('show');
+}
+
+const clickButtonDescipher = () => {
+    pageDescipher.classList.add('show');
+    pageDescipher.classList.remove('hide');
+    homePage.classList.add('hide');
+    homePage.classList.add('show');
+}
+
 const buttonEncode = document.getElementById('btn-encode');
 buttonEncode.addEventListener('click', () => {
     const offset = parseInt(document.getElementById('offset').value);
@@ -48,17 +69,7 @@ buttonDecode.addEventListener('click', () => {
     document.getElementById('cvv-decoded').value = newObj.cvv;
 })
 
-// const buttonDecode = document.getElementById('btn-decode');
-// buttonDecode.addEventListener('click', () => {
-//     const 
-// })
 
-// const clickButtonCipher = () => {
-//     cipher.classList.add('show');
-//     cipher.classList.remove('hide');
-//     home.classList.remove('hide';
-//     home.classList.add('show');
-// }
 
 // const clickButtonDescipher = () => {
 //     descipher.classList.add('hide');
@@ -87,7 +98,9 @@ buttonDecode.addEventListener('click', () => {
 
  
 
-// buttonCipher.addEventListener('click', clickButtonCipher);
-//buttonDescipher.addEventListener('click', clickButtonDescipher);
-//clickButtonStart.addEventListener('click', clickButtonStart);
+// ButtonStart.addEventListener('click', clickButtonStart);
+buttonDescipher.addEventListener('click', clickButtonDescipher);
+buttonCipher.addEventListener('click', clickButtonCipher);
+
+
 //clickButtonEncode.addEventListener('click', clickButtonEncode);
