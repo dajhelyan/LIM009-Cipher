@@ -3,22 +3,53 @@ const pageCipher = document.getElementById('page-cipher');
 const pageDescipher = document.getElementById('page-descipher');
 const buttonCipher = document.getElementById('button-cipher');
 const buttonDescipher = document.getElementById('button-descipher');
-// const clickButtonStart = document.getElementById('')
+const buttonHome = document.getElementById('btn-home');
+const buttonPageHome = document.getElementById('btn-page-home');
+const buttonPageDescipher = document.getElementById('btn-page-decode');
+const buttonPageEncode = document.getElementById('btn-page-encode');
 
 const clickButtonCipher = () => {
     pageCipher.classList.add('show');
     pageCipher.classList.remove('hide');
-    homePage.classList.remove('hide');
+    homePage.classList.add('hide');
+    homePage.classList.remove('show');
+}
+
+const clickbuttonHome = () => {
     homePage.classList.add('show');
+    homePage.classList.remove('hide');
+    pageCipher.classList.add('hide');
+    pageCipher.classList.remove('show');
+}
+
+const clickbuttonPageDescipher = () => {
+    pageCipher.classList.add('hide');
+    pageCipher.classList.remove('show');
+    pageDescipher.classList.add('show');
+    pageDescipher.classList.remove('hide');
 }
 
 const clickButtonDescipher = () => {
     pageDescipher.classList.add('show');
     pageDescipher.classList.remove('hide');
     homePage.classList.add('hide');
-    homePage.classList.add('show');
+    homePage.classList.remove('show');
 }
 
+const clickbuttonPageHome = () => {
+    homePage.classList.add('show');
+    homePage.classList.remove('hide');
+    pageDescipher.classList.add('hide');
+    pageDescipher.classList.remove('show');
+}
+
+const clickbuttonPageEncode = () => {
+    pageDescipher.classList.add('hide');
+    pageDescipher.classList.remove('show');
+    pageCipher.classList.add('show');
+    pageCipher.classList.remove('hide');
+}
+ 
 const buttonEncode = document.getElementById('btn-encode');
 buttonEncode.addEventListener('click', () => {
     const offset = parseInt(document.getElementById('offset').value);
@@ -97,10 +128,12 @@ buttonDecode.addEventListener('click', () => {
 // }
 
  
-
-// ButtonStart.addEventListener('click', clickButtonStart);
+buttonHome.addEventListener('click', clickbuttonHome);
 buttonDescipher.addEventListener('click', clickButtonDescipher);
+buttonPageHome.addEventListener('click', clickbuttonPageHome);
+buttonPageDescipher.addEventListener('click', clickbuttonPageDescipher);
 buttonCipher.addEventListener('click', clickButtonCipher);
+buttonPageEncode.addEventListener('click', clickbuttonPageEncode);
 
 
 //clickButtonEncode.addEventListener('click', clickButtonEncode);

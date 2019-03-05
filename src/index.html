@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <!-- <link rel="stylesheet" href="css/fontello.css" /> -->
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -53,13 +52,13 @@
       <input type="number" placeholder="xx/xx" id="date-encode">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-encode">
-      <button id="btn-encode"><span><i class="fas fa-lock"></i></span>Encriptar</i></button> 
+      <button type="button" id="btn-encode"><span><i class="fas fa-lock"></i></span>Encriptar</i></button> 
       <!-- <button id="btn-encode" type="button">encriptar</button> -->
       <h4>Datos encriptado:</h4>
       <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> 
       <i class="fas fa-copy"></i>
-      <button id="" class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
-       <button class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
+      <button id="btn-home" type="button" class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
+      <button id="btn-page-decode" type="button" class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decoded" type="button">desencriptar</button> -->
     </div>
   </section>
@@ -72,7 +71,7 @@
       <h4>Datos a desencriptar:</h4>
       <textarea class="message" id="message-decode" cols="30" rows="10" placeholder="Ingresa tu mensaje aqui..."></textarea>
       <i class="fas fa-paste"></i>
-      <button id="btn-decode" class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
+      <button id="btn-decode" type="button" class="button decode"><span><i class="fas fa-lock-open"></i>Desencriptar</span></button> 
       <!-- <button id="btn-decode" type="button">desencriptar</button> -->
       <h4>Datos desencriptado:</h4>
       <p>Nombre:</p>
@@ -85,10 +84,10 @@
       <input type="number" placeholder="xx/xx" id="date-decoded">
       <p>cvv</p>
       <input type="number" placeholder="xxx" id="cvv-decoded">
-      <button class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
+      <button id="btn-page-home" type="button" class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
       <!-- <button id="btn-home" type="button">inicio</button> -->
       <!-- <button id="btn-encoded" type="button">encriptar</button> -->
-      <i class="fas fa-lock"></i>
+      <button id="btn-page-encode" type="button" class="button encode" ><span><i class="fas fa-lock"></i></span>Encriptar</button>
     </div>
   </section>
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
