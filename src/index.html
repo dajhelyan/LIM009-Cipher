@@ -35,25 +35,40 @@
       </div>
   </section>
   <section id="page-cipher" class="hide">
-    <div class="enter-offset">
-      <h3>Ingresa tu codigo secreto</h3> 
-      <input id="offset" type="number" placeholder="ingresar offset">
-      <p>No olvides compartir tu codigo secreto con tu receptor</p>
-    </div>
+      <div class="logo"> 
+          <img src="../src/img/69ff5d9d-3bb0-44ee-b802-7ae26aee3bb3.png" alt="">
+      </div> 
     <div class="page-encode">
-      <h4>Ingresa tus datos</h4>
-      <p>Nombre:</p>
-      <input class="enter-name" id="name-encode" placeholder="nombre">
-      <p>Apellido:</p>
-      <input type="text" placeholder="apellido" id="surname-encode">
-      <p>N° de tarjeta</p>
-      <input type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-encode">
-      <p>fecha:</p>
-      <input type="number" placeholder="xx/xx" id="date-encode">
-      <p>cvv</p>
-      <input type="number" placeholder="xxx" id="cvv-encode">
-      <button type="button" id="btn-encode"><span><i class="fas fa-lock"></i></span>Encriptar</i></button> 
-      <!-- <button id="btn-encode" type="button">encriptar</button> -->
+      <div class="form">
+        <h2 class="form-tittle">Ingresa tus datos</h2>
+        <div class="contenedor-form">
+            <div class="enter-offset">
+                <p>Ingresa tu codigo secreto</p> 
+                <input id="offset" type="number" placeholder="Ingresar offset">
+            </div>
+            <div class="input-48">
+              <p>Nombre:</p>
+              <input class="input enter-name" id="name-encode" placeholder="nombre">
+            </div>
+            <div class="input-48">
+              <p>Apellido:</p>
+              <input class="input" type="text" placeholder="apellido" id="surname-encode">
+            </div>
+            <div class="input-100">
+              <p>N° de tarjeta</p>
+              <input class="input" type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-encode">
+            </div>
+            <div class="input-48">
+              <p>Fecha:</p>
+              <input class="input" type="number" placeholder="xx/xx" id="date-encode">
+            </div>
+            <div class="input-48">
+              <p>Cvv</p>
+              <input class="input" type="number" placeholder="xxx" id="cvv-encode">
+            </div>
+            <button type="button" id="btn-encode"><span><i class="fas fa-lock"></i></span>Encriptar</i></button> 
+        </div>
+      </div>
       <h4>Datos encriptado:</h4>
       <textarea class="message" id="message-encoded" cols="30" rows="10" placeholder="No olvides copiar tu mensaje encriptado de aqui..."></textarea> 
       <i class="fas fa-copy"></i>
@@ -75,15 +90,15 @@
       <!-- <button id="btn-decode" type="button">desencriptar</button> -->
       <h4>Datos desencriptado:</h4>
       <p>Nombre:</p>
-      <input class="message" id="name-decoded" placeholder="nombre">
+      <input class="input message" id="name-decoded" placeholder="nombre">
       <p>Apellidos:</p>
-      <input type="text" placeholder="apellidos" id="surname-decoded">
+      <input class="input" type="text" placeholder="apellidos" id="surname-decoded">
       <p>N° de tarjeta:</p>
-      <input type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-decoded">
+      <input class="input-large"type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-decoded">
       <p>Fecha:</p>
-      <input type="number" placeholder="xx/xx" id="date-decoded">
+      <input class="input" type="number" placeholder="xx/xx" id="date-decoded">
       <p>cvv</p>
-      <input type="number" placeholder="xxx" id="cvv-decoded">
+      <input class="input" type="number" placeholder="xxx" id="cvv-decoded">
       <button id="btn-page-home" type="button" class="button home"></i><span><i class="fas fa-home"></i></span>Inicio</button>
       <!-- <button id="btn-home" type="button">inicio</button> -->
       <!-- <button id="btn-encoded" type="button">encriptar</button> -->

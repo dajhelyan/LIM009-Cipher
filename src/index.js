@@ -99,34 +99,6 @@ buttonDecode.addEventListener('click', () => {
     document.getElementById('date-decoded').value = newObj.date;
     document.getElementById('cvv-decoded').value = newObj.cvv;
 })
-
-
-
-// const clickButtonDescipher = () => {
-//     descipher.classList.add('hide');
-//     descipher.classList.remove('show');
-//     home.classList.add('hide');
-//     home.classList.remove('show');
-// }
-
-// const clickButtonStart = () => {
-//     home.classList.add('show');
-//     home.classList.remove('hide');
-//     cipher.classList.remove('hide');
-//     cipher.classList.add('show');
-// }
-
-
-// const msg = () => {
-//     document.getElementById('encode').value;
-//     document.getElementById('msg');
-//     console.log(msg);
-// }
-
-// console.log('message');
-
-// }
-
  
 buttonHome.addEventListener('click', clickbuttonHome);
 buttonDescipher.addEventListener('click', clickButtonDescipher);
@@ -134,6 +106,3 @@ buttonPageHome.addEventListener('click', clickbuttonPageHome);
 buttonPageDescipher.addEventListener('click', clickbuttonPageDescipher);
 buttonCipher.addEventListener('click', clickButtonCipher);
 buttonPageEncode.addEventListener('click', clickbuttonPageEncode);
-
-
-//clickButtonEncode.addEventListener('click', clickButtonEncode);

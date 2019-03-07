@@ -82,9 +82,44 @@ section {
     display: none;
 }
 
-/* .icono{
-    font-size: 200px;
-} */
+* {
+    box-sizing: border-box;
+}
+
+.form {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+}
+
+.form-tittle {
+    background: skyblue;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom: 5px solid crimson;
+}
+
+.contenedor-form{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-48 {
+    width: 48%;
+}
+
+.input-large {
+    width: 100%;
+}
+
 .button.home {
     background: #00B0FF;
     color: #fff;
