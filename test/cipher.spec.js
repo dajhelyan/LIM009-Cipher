@@ -27,12 +27,15 @@ describe('cipher', () => {
     it('deberia retornar "{" para "{" con offset de 2',() => {
       assert.equal(cipher.encode(2, "{"), "{");
     });
-    it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => 
-    assert.equal(cipher.encode(33,"ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 'HIJKLMNOPQRSTUVWXYZABCDEFG')
-  );
-  it('deberia retornar "Jqnc"owpfq" para "Hola mundo"con offset de 2', () => {
+    it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => { 
+    assert.equal(cipher.encode(33,"ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 'HIJKLMNOPQRSTUVWXYZABCDEFG');
+    });
+    it('deberia retornar "Jqnc"owpfq" para "Hola mundo"con offset de 2', () => {
     assert.equal(cipher.encode(2,"Hola mundo"), 'Jqnc"owpfq');
-  });
+    });
+    it('deberia retornar "EFGHIJKLMNOPQRSTUVWXYZABCD" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset de 30', () => {
+      assert.equal(window.cipher.encode(30, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 'EFGHIJKLMNOPQRSTUVWXYZABCD');
+    });
   });
 
   describe('cipher.decode', () => {
@@ -58,9 +61,12 @@ describe('cipher', () => {
     it('deberia retornar "Hola mundo" para "Jqnc"owpfq" con offset de 2', () => {
       assert.equal(cipher.decode(2, 'Jqnc"owpfq'), 'Hola mundo');
     });
-    it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33', () =>
-    assert.equal(cipher.decode(33,"HIJKLMNOPQRSTUVWXYZABCDEFG"), "ABCDEFGHIJKLMNOPQRSTUVWXYZ") 
-    );
+    it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33', () => { 
+    assert.equal(cipher.decode(33,"HIJKLMNOPQRSTUVWXYZABCDEFG"), "ABCDEFGHIJKLMNOPQRSTUVWXYZ"); 
+    });
+    it('deberia retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "EFGHIJKLMNOPQRSTUVWXYZABCD" con offset de 30', () => {
+      assert.equal(cipher.decode(30, "EFGHIJKLMNOPQRSTUVWXYZABCD"), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    });
   });
 
 });

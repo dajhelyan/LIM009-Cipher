@@ -8,47 +8,33 @@ const buttonPageHome = document.getElementById('btn-page-home');
 const buttonPageDescipher = document.getElementById('btn-page-decode');
 const buttonPageEncode = document.getElementById('btn-page-encode');
 
-const clickButtonCipher = () => {
-    pageCipher.classList.add('show');
-    pageCipher.classList.remove('hide');
-    homePage.classList.add('hide');
-    homePage.classList.remove('show');
-}
-
-const clickbuttonHome = () => {
-    homePage.classList.add('show');
-    homePage.classList.remove('hide');
-    pageCipher.classList.add('hide');
-    pageCipher.classList.remove('show');
-}
-
-const clickbuttonPageDescipher = () => {
-    pageCipher.classList.add('hide');
-    pageCipher.classList.remove('show');
-    pageDescipher.classList.add('show');
-    pageDescipher.classList.remove('hide');
-}
-
-const clickButtonDescipher = () => {
-    pageDescipher.classList.add('show');
-    pageDescipher.classList.remove('hide');
-    homePage.classList.add('hide');
-    homePage.classList.remove('show');
-}
-
-const clickbuttonPageHome = () => {
-    homePage.classList.add('show');
-    homePage.classList.remove('hide');
-    pageDescipher.classList.add('hide');
-    pageDescipher.classList.remove('show');
-}
-
-const clickbuttonPageEncode = () => {
-    pageDescipher.classList.add('hide');
-    pageDescipher.classList.remove('show');
-    pageCipher.classList.add('show');
-    pageCipher.classList.remove('hide');
-}
+const pages = (pageToShow) => {
+    [pageCipher, homePage, pageDescipher].forEach(page => {
+        page.classList.remove('show');
+        page.classList.add('hide');
+    });
+    pageToShow.classList.add('show');
+    pageToShow.classList.remove('hide');
+ }
+ const clickButtonCipher = () => {
+    pages(pageCipher);
+ }
+ const clickbuttonHome = () => {
+    pages(homePage);
+ }
+ const clickbuttonPageDescipher = () => {
+    pages(pageDescipher);
+ }
+ const clickButtonDescipher = () => {
+    pages(pageDescipher);
+ }
+ const clickbuttonPageHome = () => {
+    pages(homePage);
+ }
+ const clickbuttonPageEncode = () => {
+    pages(pageCipher);
+ }
+ 
  
 const buttonEncode = document.getElementById('btn-encode');
 buttonEncode.addEventListener('click', () => {
